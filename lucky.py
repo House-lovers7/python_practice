@@ -1,10 +1,21 @@
+import tkinter as tk
 import random
 
 
-def omikuji():
+def dispLabel():
     kuji = ["大吉", "中吉", "小吉", "凶"]
-    return random.choice(kuji)
+    lbl.configure(text=random.choice(kuji))
 
 
-kekka = omikuji()
-print("御神籤のけっか発表", kekka, "じゃぞ!!!")
+root = tk.Tk()
+root.geometry("200x100")
+
+lbl = tk.Label(text="LABEL")
+btn = tk.Button(text="PUSH", command=dispLabel)
+
+lbl.pack()
+btn.pack()
+tk.mainloop()
+
+# kekka = omikuji()
+# print("御神籤のけっか発表", kekka, "じゃぞ!!!")
