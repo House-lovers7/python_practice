@@ -1,11 +1,16 @@
-
 import tkinter as tk
-import os, sys
 
-root = tk.TK()
-root.geometry("200×100")
-lbl = tk.Label(text = "LABEL")
-btn = tk.Button(text = "PUSH")
+
+def dispLabel():
+    lbl.configure(text="こんにちは")
+
+
+root = tk.Tk()
+root.geometry("200x100")
+
+lbl = tk.Label(text="LABEL")
+btn = tk.Button(text="PUSH", command=dispLabel)
+
 lbl.pack()
 btn.pack()
 tk.mainloop()
